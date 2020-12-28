@@ -1,0 +1,5 @@
+package com.donascimento.gestaodefinanas.model.entity;
+
+public class Lacamento {
+
+}

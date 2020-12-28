@@ -1,0 +1,5 @@
+package com.donascimento.gestaodefinancas.model.entity;
+
+public class Lancamento {
+
+}

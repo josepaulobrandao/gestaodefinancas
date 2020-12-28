@@ -1,0 +1,5 @@
+package com.donascimento.gestaodefinancas.service.Impl;
+
+public class UsuarioServiceImpl {
+
+}

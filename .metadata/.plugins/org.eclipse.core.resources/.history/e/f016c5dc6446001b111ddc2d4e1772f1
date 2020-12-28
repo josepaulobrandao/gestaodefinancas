@@ -1,0 +1,6 @@
+package com.donascimento.gestaodefinancas.model.entity;
+
+public enum StatusLancamento {
+	
+
+}

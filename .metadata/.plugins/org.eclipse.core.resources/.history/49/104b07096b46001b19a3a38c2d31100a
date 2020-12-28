@@ -1,0 +1,5 @@
+package com.donascimento.gestaodefinancas.exeption;
+
+public class RegraNegocioExcpetion extends RuntimeExcpetion  {
+
+}

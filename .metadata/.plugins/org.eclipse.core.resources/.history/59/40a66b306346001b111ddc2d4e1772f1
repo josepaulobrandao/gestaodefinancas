@@ -1,0 +1,8 @@
+package com.donascimento.gestaodefinanas.model.entity;
+
+public class Snippet {
+	public static void main(String[] args) {
+		donascimento
+	}
+}
+

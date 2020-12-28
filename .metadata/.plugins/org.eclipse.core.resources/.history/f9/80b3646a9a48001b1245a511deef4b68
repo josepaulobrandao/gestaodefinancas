@@ -1,0 +1,10 @@
+package com.donascimento.gestaodefinancas.exeption;
+
+
+public class RegraNegocioExcpetion extends RuntimeException  {
+
+	public RegraNegocioExcpetion(String msg) {
+		super(msg);
+	}
+
+}
