@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+
+<bean id="fuenteDatosPostgreSQL"
+    class="org.springframework.jdbc.datasource.DriverManagerDataSource">
+    <property name="driverClassName" value="org.postgresql.Driver" />
+    <property name="url" value="jdbc:postgresql://localhost:5432/gestadefinancas" />
+    <property name="username" value="postgres" />
+    <property name="password" value="postgres" />
+</bean>
+<bean id="fabricaSesionPostgreSQL"
+    class="org.springframework.orm.hibernate4.LocalSessionFactoryBean">
+    <property name="configLocation" value="classpath:hibernate_postgresql.cfg.xml" />
+    <property name="dataSource" value="fuenteDatosPostgreSQL" />
+</bean>
+<bean id="gestorTransaccionesPostgreSQL"
+    class="org.springframework.orm.hibernate4.HibernateTransactionManager">
+    <property name="sessionFactory" ref="fabricaSesionPostgreSQL" />
+</bean>
+
+<tx:annotation-driven transaction-manager="gestorTransaccionesPostgreSQL" />
+<context:component-scan base-package="com" scoped-proxy="interfaces" />
